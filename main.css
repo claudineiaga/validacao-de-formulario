@@ -1,0 +1,111 @@
+/* importar o tipo de letra que eu quero*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+/* Propridades semânticas que serão aplicas para toda a página*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+/*propriedades do corpo do documento*/
+body{
+    /*flexiona os elemnetos, o que permite centralizar*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: #060c21;
+}
+/*propriedade do formulário todo*/
+.formulario{
+    position: relative;
+    background: #060c21;
+    border: 1px solid #000;
+    width: 280px;
+    height: 450px;
+    padding: 10px 40px 60px;
+    border-radius: 10px;
+    text-align: center;
+}
+/*inserir algum elemento antes do formulário*/
+.formulario::before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    background: linear-gradient(315deg, #e91363,
+    #5d02ff);
+    z-index: -1;
+    transform: skew(2deg, 1deg);
+    border-radius: 10px;
+}
+/*Estilizar o título (paravra Login)*/
+.formulario h2{
+    color: #FFF;
+    /*intensidade da fonte*/
+    font-weight: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+/*etilizar tudo que está dentro da class entrada*/
+.formulario .entrada{
+    margin-top: 30px;
+    text-align: left;
+}
+.formulario .entrada .inputBox{
+    margin-top: 5px;
+    width: 150px;
+}
+/*Estilizar todos os atributos label*/
+.formulario .entrada .inputBox label{
+    /*Colocar todos os labels um abaixo do outro*/
+    display: block;
+    color: #FFF;
+    margin-bottom: 5px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+/*Estilizar todos os atributos input*/
+.formulario .entrada .inputBox input{
+    position: relative;
+    width: 130%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 5px 5px;
+    background: linear-gradient(315deg, #e91e63,
+    #5d02ff);
+    color: #FFF;
+    font-size: 15px;
+    border-radius: 10px;
+}
+/*Estilizando o botão*/
+.formulario .entrada  .inputBox input[type='submit']{
+    cursor: pointer;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+/*Muda de cor quando passa o mouse*/
+.formulario .entrada  .inputBox input[type='submit']:hover{
+    background: linear-gradient(315deg, #5d02ff,
+    #e91e63);
+}
+/*Muda de cor quando está sendo precionado*/
+.formulario .entrada  .inputBox input[type='submit']:active{
+    color: rgba(255, 255, 255, 0.521); 
+    background: linear-gradient(315deg, #e91e6271,
+    #5f02ff8c);
+ }
+ /*Estiliza os campos de 'esqucer senha'*/
+ .esquecer{
+    margin-top: 10px;
+    color: #FFF;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.esquecer a{
+    color: #ff0800;
+}
